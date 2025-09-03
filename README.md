@@ -1,7 +1,7 @@
 # Proyecto Final - PromptAudit
 
 ### Autor
-Lautaro Falco  
+**Lautaro Falco**  
 Curso: Generación de Prompts con IA  
 Comisión: 76410  
 Fecha: Agosto 2025  
@@ -20,7 +20,8 @@ Esto puede llevar a decisiones erróneas en áreas críticas como ventas, invers
 ---
 
 ## Propuesta de solución
-La solución propuesta es **PromptAudit**, un sistema basado en *prompting* que conecta con modelos de IA (Gemini + Hugging Face) para:
+La solución propuesta es **PromptAudit**, un sistema basado en *prompting* que conecta con modelos de IA de **OpenAI** para:
+
 - Diagnosticar problemas de calidad en un dataset.
 - Generar sugerencias de limpieza.
 - Producir visualizaciones simples de los problemas detectados.
@@ -31,30 +32,35 @@ La solución propuesta es **PromptAudit**, un sistema basado en *prompting* que 
 1. Comprender cómo aplicar **Fast Prompting** para optimizar interacciones con la IA.  
 2. Diseñar una **POC funcional en Jupyter Notebook**.  
 3. Minimizar consultas innecesarias a la API, reduciendo costos y mejorando eficiencia.  
-4. Demostrar cómo el prompting puede mejorar la confiabilidad de un dataset.  
+4. Demostrar cómo el prompting puede mejorar la confiabilidad de un dataset.
 
 ---
 
 ## Metodología
 1. **Carga y preprocesamiento**: Lectura del CSV en Python, obtención de resúmenes de datos.  
-2. **Texto → Texto**: Prompts a Gemini para diagnóstico, riesgos y sugerencias.  
-3. **Texto → Imagen**: Prompts a Hugging Face para generar visualizaciones (ej. nulos, duplicados, outliers).  
-4. **Fast Prompting**: Uso de prompts concisos, enfocados en resultados específicos, optimizando el número de tokens.  
+2. **Texto → Texto**: Prompts a OpenAI para diagnóstico, riesgos y sugerencias.  
+3. **Texto → Imagen**: Prompts a OpenAI (DALL·E o GPT-Image) para generar visualizaciones (ej. nulos, duplicados, outliers).  
+4. **Fast Prompting**: Uso de prompts concisos, enfocados en resultados específicos, optimizando el número de tokens.
 
 ---
 
 ## Herramientas y tecnologías
-- **Python** (pandas, matplotlib, dotenv)  
-- **Gemini API** (texto → texto)  
-- **CLIPDROP API** (texto → imagen, con modelos como `stabilityai/stable-diffusion`)  
+- **Python** (`pandas`, `dotenv`, `openai`)  
+- **OpenAI API** (`gpt-4o`, `dall-e-3`, `gpt-image-1`)  
 - **Jupyter Notebook** para la POC  
 
 ---
 
 ## Implementación
-La implementación se encuentra en [`notebook/PromptAudit_POC.ipynb`](notebook/PromptAudit_POC.ipynb).  
+La implementación se encuentra en `PromptAudit_POC.ipynb`.  
 
 Incluye ejemplos de:
 - Diagnóstico automático de dataset (texto → texto).  
 - Visualización generada por IA de problemas de calidad (texto → imagen).  
 - Optimización con **Fast Prompting**.  
+
+---
+
+## Requisitos
+- Python 3.10+
+- Archivo `.env` con tu clave de OpenAI:
