@@ -78,13 +78,17 @@ Incluye:
 
 ## 📊 Estimación de uso de tokens y costos
 
-| Interacción | Modelo usado     | Tokens estimados | Costo aproximado (USD) |
-|-------------|------------------|------------------|-------------------------|
-| Diagnóstico textual | `gpt-4o-mini` | ~300 tokens       | ~$0.0015                |
-| Generación de imagen | `gpt-image-1` | ~1000 tokens + imagen | ~$0.02–0.04 (según plan) |
+| Interacción           | Modelo usado     | Tokens estimados | Costo aproximado (USD) |
+|-----------------------|------------------|------------------|-------------------------|
+| Diagnóstico textual   | `gpt-4o-mini`    | ~1000 tokens     | ~$0.005                 |
+| Generación de imagen  | `gpt-image-1`    | ~1000 tokens + imagen | ~$0.02–0.04 (según plan) |
 
-> Total estimado por ejecución: **~$0.03–0.05 USD**  
-> El proyecto fue diseñado para minimizar el uso de tokens sin sacrificar calidad, aplicando Fast Prompting y evitando llamadas innecesarias.
+> Total estimado por ejecución: **~$0.025–0.045 USD**
+
+El aumento a 1000 tokens en el diagnóstico textual permite generar respuestas más completas, estructuradas y útiles, como reportes en formato Markdown con interpretación, recomendaciones y conclusiones.  
+Se mantiene el enfoque de **Fast Prompting**, priorizando prompts bien diseñados que maximizan la calidad sin generar llamadas innecesarias.  
+El costo sigue siendo accesible para entornos educativos, pruebas de concepto o proyectos personales.
+
 
 ---
 
